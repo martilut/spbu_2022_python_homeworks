@@ -38,10 +38,12 @@ def get_vector_length(vector):
     check_vectors(vector)
     answer = 0
     for coordinate in vector:
-        answer += coordinate ** 2
+        answer += coordinate**2
     return sqrt(answer)
 
 
 def get_degree(first_vector, second_vector):
-    return acos(get_dot_product(first_vector, second_vector)
-                / (get_vector_length(first_vector) * get_vector_length(second_vector)))
+    return acos(
+        get_dot_product(first_vector, second_vector)
+        / (get_vector_length(first_vector) * get_vector_length(second_vector))
+    )
