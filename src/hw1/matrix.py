@@ -12,19 +12,19 @@ def check_matrices(*matrices):
             check_vectors(row)
 
 
+def is_multiplication_correct(first_matrix, second_matrix):
+    if len(first_matrix) != len(second_matrix[0]) or len(first_matrix[0]) != len(
+        second_matrix
+    ):
+        raise TypeError("Incorrect matrices")
+
+
 def are_matrices_equal(*matrices):
     matrix_rows = len(matrices[0])
     matrix_columns = len(matrices[0][0])
     for matrix in matrices:
         if len(matrix) != matrix_rows or len(matrix[0]) != matrix_columns:
             raise TypeError("Matrices must have equal size")
-
-
-def is_multiplication_correct(first_matrix, second_matrix):
-    if len(first_matrix) != len(second_matrix[0]) or len(first_matrix[0]) != len(
-        second_matrix
-    ):
-        raise TypeError("Incorrect matrices")
 
 
 def sum_matrices(*matrices):
