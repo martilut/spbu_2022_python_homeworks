@@ -38,7 +38,9 @@ def sum_matrices(*matrices):
 
 def transpose_matrix(matrix):
     check_matrices(matrix)
-    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+    return [
+        [matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))
+    ]
 
 
 def multiply_matrices(first_matrix, second_matrix):
