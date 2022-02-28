@@ -47,4 +47,3 @@ def multiply_matrices(first_matrix, second_matrix):
                 get_dot_product(first_matrix[row], [second_matrix[k][column] for k in range(len(second_matrix))]))
         result.append(result_row)
     return result
-

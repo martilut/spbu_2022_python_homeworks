@@ -57,6 +57,7 @@ def test_multiply_matrices_square():
     b_matrix = [[5, 6], [7, 8]]
     assert multiply_matrices(a_matrix, b_matrix) == [[19, 22], [43, 50]]
 
+
 def test_multiply_matrices_nonsquare():
     a_matrix = [[1, 2], [3, 4], [5, 6]]
     b_matrix = [[5, 6, 7], [7, 8, 9]]
