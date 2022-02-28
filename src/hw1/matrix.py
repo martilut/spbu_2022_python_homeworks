@@ -13,9 +13,7 @@ def check_matrices(*matrices):
 
 
 def is_multiplication_correct(first_matrix, second_matrix):
-    if len(first_matrix) != len(second_matrix[0]) or len(first_matrix[0]) != len(
-        second_matrix
-    ):
+    if len(first_matrix) != len(second_matrix[0]) or len(first_matrix[0]) != len(second_matrix):
         raise TypeError("Incorrect matrices")
 
 
@@ -30,10 +28,7 @@ def are_matrices_equal(*matrices):
 def sum_matrices(*matrices):
     check_matrices(*matrices)
     are_matrices_equal(*matrices)
-    return [
-        get_vector_sum(*[matrix[i] for matrix in matrices])
-        for i in range(len(matrices[0]))
-    ]
+    return [get_vector_sum(*[matrix[i] for matrix in matrices]) for i in range(len(matrices[0]))]
 
 
 def transpose_matrix(matrix):
