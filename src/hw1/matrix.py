@@ -13,8 +13,9 @@ def check_matrices(*matrices):
 
 
 def is_multiplication_correct(first_matrix, second_matrix):
-    if len(first_matrix) != len(second_matrix[0]) or len(first_matrix[0]) != len(
-        second_matrix
+    if (
+            len(first_matrix) != len(second_matrix[0])
+            or len(first_matrix[0]) != len(second_matrix)
     ):
         raise TypeError("Incorrect matrices")
 
