@@ -18,11 +18,6 @@ async def download_pic():
         save_pic_from_url(url)
 
 
-async def main(times):
-    tasks = [asyncio.create_task(download_pic()) for _ in range(times)]
-    await asyncio.gather(*tasks)
-
-
 def input_number():
     print("Input the amount of homers you want to download: ")
     times = input()
@@ -35,5 +30,11 @@ def input_number():
     return times
 
 
+async def main():
+    times = input_number()
+    tasks = [asyncio.create_task(download_pic()) for _ in range(times)]
+    await asyncio.gather(*tasks)
+
+
 if __name__ == "__main__":
-    asyncio.run(main(input_number()))
+    asyncio.run(main())
